@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/components/404.css">
     <title>404</title>
 
 </head>
@@ -60,7 +60,7 @@
             </button>
             <form class="btn-container search" action="https://google.com/" method="GET" x-data="{ q:'', }"
             x-on:submit="q = q + ' site:mmimontbeliard.com'">
-            <label  for="q" class="visually-hidden">Rechercher</label>
+            <label  for="q" class="visually-hidden">Rechercher</label> 
             <input type="text" id="q" name="q" x-model="q" placeholder="Rechercher">
             <button type="submit"><img src="/public/icones/search.svg" alt="icone de recherche"></button>
             </form>
