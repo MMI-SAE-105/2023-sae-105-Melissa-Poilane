@@ -42,7 +42,7 @@
         <svg>
             <defs>
                 <filter id="glow">
-                    <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4"></feGaussianBlur>
+                    <feGaussianBlur  result="coloredBlur" stdDeviation="4"></feGaussianBlur>
                     <feMerge>
                         <feMergeNode in="coloredBlur"></feMergeNode>
                         <feMergeNode in="SourceGraphic"></feMergeNode>
@@ -51,13 +51,12 @@
             </defs>
         </svg>
 
-        <h2>Page non trouvée</h2>
+        
         <section class="btn-container">
-            <button class="btn">
-             <a href="/">
+            <h2>Page non trouvée</h2>
+             <a href="/" class="btn">
                  <img class="house" src="/public/icones/house.svg" alt="Accueil">
              </a>  
-            </button>
             <form class="btn-container search" action="https://google.com/" method="GET" x-data="{ q:'', }"
             x-on:submit="q = q + ' site:mmimontbeliard.com'">
             <label  for="q" class="visually-hidden">Rechercher</label> 
