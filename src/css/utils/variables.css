@@ -12,8 +12,10 @@
 --o-v-e-r-l-a-y: rgba(0, 0, 0, 1);
 --gris-foncé: rgba(152, 149, 146, 1);
 
-/* Text-size styles */
-
+/* Polices de caracteres */
+--font-nunito: "Nunito", sans-serif;
+--font-nunito-black: "Nunito Black", sans-serif;
+--font-PT: "PT Sans", sans-serif;
 /* base size: body-moyen-moins (16px) */
 --heading-grand: 2.25rem;
 --heading-petit: 1.5rem;
@@ -25,5 +27,12 @@
 --petit-texte: 0.69rem;
 --petit-texte-upper: 0.81rem;
 --heading-moyen: 1.88rem;
+
+/* Espaces */
+--space1x: 8px;
+--space2x: 16px;
+--space3x: 24px;
+--space4x: 48px;
+--space5x: 80px;
 
 }

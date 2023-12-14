@@ -1,4 +1,44 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
+body {
+    font-family: var(--font-PT);
+    line-height: 27px;
+    background-color: var(--noir-primaire);
+  }
+
+h1,h2,h3 {
+  font-family: var(--font-nunito);
+  font-weight: 700;
+  line-height: 39.6px;
+  }
+  h1 {
+    font-size: var(--heading-grand);
+  }
+  
+  h2 {
+    font-size: var(--heading-petit);
+  }
+  
+  h3 {
+    font-size: var(--heading-moyen);
+  }
+
+  .list--unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container {
+    padding-left: var(--space3x);
+    padding-right: var(--space3x);
+  }
+  
+  
 /* pour enlever le scroll */
 .noscroll,
 .noscroll body {
