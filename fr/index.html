@@ -89,79 +89,93 @@
                 that wins.”</p>
             <footer><cite class="citation__nom">Bjarke Ingels</cite></footer>
         </blockquote>
-        <div class="carousel">
-            <div class="carousel__element">
-                <a href="/fr/moutaindwelling.html">
-                    <img class="carousel__image" src="/public/img/frise/frise1.webp" alt="moutain dwelling">
-                    <p class="carousel__texte">Mountain Dwellings
-                        <br>
-                        2005
-                    </p>
-                </a>
+        <div class="carousel" x-data="{hrefCourant: '#ecran-1',}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"
+                @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth; ">
+                &lt;</button>
+
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant"
+                @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth; ">&gt;</button>
+            <div class="carrousel__parent--elements" x-ref="parent" @scroll.debounce.250ms.passive="
+                    hrefCourant = '#'+
+                  [...$refs.parent.children]
+                   .find(e=>e.getBoundingClientRect().x>=0)
+                   .id">
+
+                <div id="ecran-1" class="carousel__element">
+                    <a href="/fr/moutaindwelling.html">
+                        <img class="carousel__image" src="/public/img/frise/frise1.webp" alt="moutain dwelling">
+                        <p class="carousel__texte">Mountain Dwellings
+                            <br>
+                            2005
+                        </p>
+                    </a>
+                </div>
+                <div id="ecran-2" class="carousel__element">
+                    <a href="/fr/8house.html">
+                        <img class="carousel__image" src="/public/img/frise/frise2.webp" alt="8 House">
+                        <p class="carousel__texte">8 House
+                            <br>
+                            2010
+                        </p>
+                    </a>
+                </div>
+                <div id="ecran-3" class="carousel__element">
+                    <a href="/fr/superkilen.html">
+                        <img class="carousel__image" src="/public/img/frise/frise3.webp" alt="Superkilen">
+                        <p class="carousel__texte">Superkilen
+                            <br>
+                            2012
+                        </p>
+                    </a>
+                </div>
+                <div id="ecran-4" class="carousel__element">
+                    <a href="/fr/maritimemuseum.html">
+                        <img class="carousel__image" src="/public/img/frise/frise4.webp" alt="Danish Maritime Museum">
+                        <p class="carousel__texte">Danish Maritime Museum
+                            <br>
+                            2013
+                        </p>
+                    </a>
+                </div>
+                <div id="ecran-5" class="carousel__element">
+                    <a href="/fr/pyramide.html">
+                        <img class="carousel__image" src="/public/img/frise/frise5.webp" alt="Via 57 West">
+                        <p class="carousel__texte">Via 57 West
+                            <br>
+                            2016
+                        </p>
+                    </a>
+                </div>
+                <div id="ecran-6" class="carousel__element">
+                    <a href="/fr/legohouse.html">
+                        <img class="carousel__image" src="/public/img/frise/frise6.webp" alt="Lego House">
+                        <p class="carousel__texte">LEGO House
+                            <br>
+                            2017
+                        </p>
+                    </a>
+                </div>
+                <div id="ecran-7" class="carousel__element">
+                    <a href="/fr/amagerbakke.html">
+                        <img class="carousel__image" src="/public/img/frise/frise7.webp" alt="Amager Bakke">
+                        <p class="carousel__texte">Amager Bakke
+                            <br>
+                            2017
+                        </p>
+                    </a>
+                </div>
+                <div id="ecran-8" class="carousel__element">
+                    <a href="/fr/twist.html">
+                        <img class="carousel__image" src="/public/img/frise/frise8.webp" alt="Kistefos Museum">
+                        <p class="carousel__texte">Kistefos Museum
+                            <br>
+                            2019
+                        </p>
+                    </a>
+                </div>
             </div>
-            <div class="carousel__element">
-                <a href="/fr/8house.html">
-                    <img class="carousel__image" src="/public/img/frise/frise2.webp" alt="8 House">
-                    <p class="carousel__texte">8 House
-                        <br>
-                        2010
-                    </p>
-                </a>
-            </div>
-            <div class="carousel__element">
-                <a href="/fr/superkilen.html">
-                    <img class="carousel__image" src="/public/img/frise/frise3.webp" alt="Superkilen">
-                    <p class="carousel__texte">Superkilen
-                        <br>
-                        2012
-                    </p>
-                </a>
-            </div>
-            <div class="carousel__element">
-                <a href="/fr/maritimemuseum.html">
-                    <img class="carousel__image" src="/public/img/frise/frise4.webp" alt="Danish Maritime Museum">
-                    <p class="carousel__texte">Danish Maritime Museum
-                        <br>
-                        2013
-                    </p>
-                </a>
-            </div>
-            <div class="carousel__element">
-                <a href="/fr/pyramide.html">
-                    <img class="carousel__image" src="/public/img/frise/frise5.webp" alt="Via 57 West">
-                    <p class="carousel__texte">Via 57 West
-                        <br>
-                        2016
-                    </p>
-                </a>
-            </div>
-            <div class="carousel__element">
-                <a href="/fr/legohouse.html">
-                    <img class="carousel__image" src="/public/img/frise/frise6.webp" alt="Lego House">
-                    <p class="carousel__texte">LEGO House
-                        <br>
-                        2017
-                    </p>
-                </a>
-            </div>
-            <div class="carousel__element">
-                <a href="/fr/amagerbakke.html">
-                    <img class="carousel__image" src="/public/img/frise/frise7.webp" alt="Amager Bakke">
-                    <p class="carousel__texte">Amager Bakke
-                        <br>
-                        2017
-                    </p>
-                </a>
-            </div>
-            <div class="carousel__element">
-                <a href="/fr/twist.html">
-                    <img class="carousel__image" src="/public/img/frise/frise8.webp" alt="Kistefos Museum">
-                    <p class="carousel__texte">Kistefos Museum
-                        <br>
-                        2019
-                    </p>
-                </a>
-            </div>
+            <!--a faire-indicateur d'écrans-->
         </div>
         <div class="container">
             <p>L'exposition « Ingels Scape » vous invite à découvrir l'œuvre d'un architecte avant-gardiste, maître dans

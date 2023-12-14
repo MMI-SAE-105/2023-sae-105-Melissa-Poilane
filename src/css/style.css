@@ -3,12 +3,13 @@
 
 
 /* Vendors */
-@import "vendors/normalize.css";
+@import "/src/css/vendors/normalize.css";
 
 /* Utils */
 
 /* Base */
-@import "base/main.css";
+@import "/src/css/base/main.css";
 /* Layout */
 
 /* Components */
+@import "/src/css/components/carrousel.css";
