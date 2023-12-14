@@ -1,0 +1,8 @@
+/* pour enlever le scroll */
+
+
+/* pour enlever le scroll */
+.noscroll,
+.noscroll body {
+    overflow: hidden;
+}

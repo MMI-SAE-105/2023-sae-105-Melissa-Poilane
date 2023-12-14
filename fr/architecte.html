@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
 
 <head>
     <meta charset="UTF-8">
@@ -11,19 +11,22 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body>
-    <header class="header">
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
         <div class="header__debut">
             <a href="/fr/index.html">
                 <img src="/public/icones/logosite.svg" alt="Logo du site">
             </a>
         </div>
         <div class="header__fin">
-            <button class="header__menu-btn menu-btn">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
                 <span class="menu-btn__hamburger"></span>
             </button>
 
-            <nav class="header__menu menu">
+            <nav class="header__menu menu" id="mainNav" x-show="menuIsOpen" x-transition.duration.500ms
+                style="display : none">
                 <ul class="menu__liste list-unstyled">
                     <li class="menu__titre">
                         <a class="menu__lien" href="/fr/index.html">Accueil</a>
