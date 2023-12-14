@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +8,50 @@
     <link rel="icon" href="/public/icones/logosite.svg">
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
+
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="header__debut">
             <a href="/fr/index.html">
                 <img src="/public/icones/logosite.svg" alt="Logo du site">
             </a>
         </div>
-        <div>
+        <div class="header__fin">
             <button class="header__menu-btn menu-btn">
                 <span class="menu-btn__hamburger"></span>
             </button>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/fr/index.html">Accueil</a>
+            <nav class="header__menu menu">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/index.html">Accueil</a>
                     </li>
-                    <li>
-                        <a href="/fr/architecte.html">Bjarke Ingels</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/architecte.html">Bjarke Ingels</a>
                     </li>
-                    <li>
-                        <a href="/fr/8house.html">8 House</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/8house.html">8 House</a>
                     </li>
-                    <li>
-                        <a href="/fr/maritimemuseum.html">Maritime Museum</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/maritimemuseum.html">Maritime Museum</a>
                     </li>
-                    <li>
-                        <a href="/fr/moutaindwelling.html">Mountain Dwelling</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/moutaindwelling.html">Mountain Dwelling</a>
                     </li>
-                    <li>
-                        <a href="/fr/legohouse.html">LEGO House</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/legohouse.html">LEGO House</a>
                     </li>
-                    <li>
-                        <a href="/fr/amagerbakke.html">Amager Bakke</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/amagerbakke.html">Amager Bakke</a>
                     </li>
-                    <li>
-                        <a href="/fr/superkilen.html">Superkilen</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/superkilen.html">Superkilen</a>
                     </li>
-                    <li>
-                        <a href="/fr/twist.html">Kistefos Museum</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/twist.html">Kistefos Museum</a>
                     </li>
-                    <li>
-                        <a href="/fr/pyramide.html">Via 57 West</a>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/fr/pyramide.html">Via 57 West</a>
                     </li>
                 </ul>
             </nav>
@@ -57,63 +59,72 @@
     </header>
 
     <main>
-        <div>
-            <div>
-                <h1>Informations légales</h1>
-                <figure>
+        <div class="heroautre">
+            <div class="heroautre__debut container">
+                <h1 class="heroautre__titre">Informations légales</h1>
+
+                <figure class="heroautre__image traitement">
                     <img src="/public/img/legalinfos.webp" alt="image d'un immeuble">
                 </figure>
             </div>
+
         </div>
-        <div>
+
+        <div class="container">
             <h2>Mention légale</h2>
-            <p>Projet réalisé dans le cadre d’une SAÉ au département <a href="https://mmimontbeliard.com/">MMI de Montbéliard</a></p>
+            <p>Projet réalisé dans le cadre d’une SAÉ au département <a href="https://mmimontbeliard.com/">MMI de
+                    Montbéliard</a></p>
         </div>
-        <div>
+        <div class="container">
             <h2>Hébergeur</h2>
             <p>Infomaniak</p>
         </div>
     </main>
-        <footer>
-            <div>
-                <a href="/fr/index.html">
-                    <img src="/public/icones/logosite.svg" alt="Logo du site">
+    <footer class="footer">
+        <div class="footer__debut">
+            <a href="/fr/index.html">
+                <img class="footer__debut--image" src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+            <p class="footer__debut--texte">Ingels Scape</p>
+        </div>
+        <nav class="footer__menu">
+            <h4 class="footer__titre">MENU</h4>
+            <ul class="list-unstyled">
+                <li><a href="/fr/infoslegales.html">Informations légales</a></li>
+                <li><a href="/fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__social">
+            <h4 class="footer__titre">Nous suivre</h4>
+            <ul class="footer__liste list--unstyled">
+                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                        <img src="/public/icones/instagram.svg" alt="icone instagram">
+                    </a></li>
+                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                        <img src="/public/icones/twitter.svg" alt="icone twitter">
+                    </a></li>
+                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                        <img src="/public/icones/facebook.svg" alt="icone facebook">
+                    </a></li>
+                <li><a href="https://big.dk/">
+                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer__fin">
+            <img class="footer__fin--logo" src="/public/icones/logommi.svg" alt="logo MMI">
+            <p class="footer__fin--texte">Mélissa Poilâne - A1
+            </p>
+            <a href="mailto:melissa.poilane@edu.univ-fcomte.fr">melissa.poilane@edu.univ-fcomte.fr</a>
+
+            <img src="/public/icones/FRactif.svg" alt="logo français">
+            <nav class="footer__fin--langue">
+                <a href="/en/infoslegales.html">
+                    <img src="/public/icones/ENinactif.svg" alt="logo anglais">
                 </a>
-                <p>Ingels Scape</p>
-            </div>
-            <nav>
-                <h4>MENU</h4>
-                <ul>
-                    <li><a href="/fr/infoslegales.html">Informations légales</a></li>
-                    <li><a href="/fr/contact.html">Contact</a></li>
-                </ul>
             </nav>
-            <div>
-                <h4>Nous suivre</h4>
-                <ul>
-                    <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
-                            <img src="/public/icones/instagram.svg" alt="icone instagram">
-                        </a></li>
-                    <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
-                            <img src="/public/icones/twitter.svg" alt="icone twitter">
-                        </a></li>
-                    <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
-                            <img src="/public/icones/facebook.svg" alt="icone facebook">
-                        </a></li>
-                    <li><a href="https://big.dk/">
-                            <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
-                        </a></li>
-                </ul>
-            </div>
-            <div>
-                <img src="/public/icones/logommi.svg" alt="logo MMI">
-                <p>Mélissa Poilâne - A1
-                    <br>
-                    melissa.poilane@edu.univ-fcomte.fr
-                </p>
-                <img src="/public/icones/FRactif.svg" alt="logo français">
-                <img src="/public/icones/ENinactif.svg" alt="logo anglais">
-            </div>
-        </footer>
+        </div>
+    </footer>
 </body>
+
 </html>
