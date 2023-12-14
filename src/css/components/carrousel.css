@@ -1,3 +1,13 @@
+.carrousel {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+    position: relative;
+    text-align: center;
+    gap: 20px;
+  }
 .carousel__image {
 
     display: block;
@@ -8,30 +18,18 @@
 
 }
 
-.carrousel__parent--elements {
-    display: flex;
-    width: 100%;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
-}
-
-.carrousel_element {
-    width: 100%;
+.carousel__element {
+    width: 190px;
     flex: none;
     scroll-snap-align: start;
 }
 
-.carrousel_element figure {
+.carousel__element figure {
     margin: 0;
 }
 
-.carrousel {
-    position: relative;
-}
-
-.carrousel_btn {
+/*
+.carrousel__btn {
     position: absolute;
     top: 50%;
     top: calc(min(500px, 100vw) / 16 * 9 / 2 + 1rem);
@@ -46,36 +44,26 @@
     color: #fff;
 }
 
-.carrousel_btn-avant {
+.carrousel__btn--avant {
     left: 0;
 }
 
-.carrousel_btn-apres {
+.carrousel__btn--apres {
     right: 0;
 }
 
-/*.caroussel_liste-liens {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    margin-top: 7vh;
-    padding: 0;
-    list-style: none;
-    gap: 1rem;
-    cursor: pointer;
-
-}*/
 /* pour personnaliser graphiquement la barre d'ascenseur */
 
 .carousel::-webkit-scrollbar-track {
-    background-color: var(--gray-200);
+    background-color: var(--noir-primaire);
 }
 
 .carousel::-webkit-scrollbar {
     height: 4px;
-    background-color: var(--gray-white);
+    background-color: var(--blanc);
 }
 
 .carousel::-webkit-scrollbar-thumb {
-    background-color: var(--brand-saumon);
+    background-color: var(--blanc);
 }
+
