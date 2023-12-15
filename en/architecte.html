@@ -125,93 +125,98 @@
                 Learn more
             </a>
         </div>
-        <!--
-            <button class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"
-                    @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth; ">
-                    &lt;</button>
-        
-                <button class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant"
-                    @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth; ">&gt;</button>
-        -->
+
         <h2 class="carrousel__titre">Les oeuvre de Bjarke Ingels</h2>
-        <div class="carrousel">
+        <div class="carrousell">
+            <button class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"
+                @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth; ">
+                &lt;</button>
+
+            <button class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant"
+                @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth; ">&gt;</button>
+
+            <div class="carrousel" x-ref="parent" @scroll.debounce.250ms.passive="
+                            hrefCourant = '#'+
+                          [...$refs.parent.children]
+                           .find(e=>e.getBoundingClientRect().x>=0)
+                           .id">
 
 
-            <div class="carousel__element">
-                <a href="/en/moutaindwelling.html">
-                    <img class="carousel__image" src="/public/img/frise/frise1.webp" alt="moutain dwelling">
+                <div id="ecran-1" class="carousel__element">
+                    <a href="/en/moutaindwelling.html">
+                        <img class="carousel__image" src="/public/img/frise/frise1.webp" alt="moutain dwelling">
 
-                </a>
-                <p class="carousel__texte">Mountain Dwellings
-                    <br>
-                    2005
-                </p>
-            </div>
-            <div class="carousel__element">
-                <a href="/en/8house.html">
-                    <img class="carousel__image" src="/public/img/frise/frise2.webp" alt="8 House">
+                    </a>
+                    <p class="carousel__texte">Mountain Dwellings
+                        <br>
+                        2005
+                    </p>
+                </div>
+                <div id="ecran-2" class="carousel__element">
+                    <a href="/en/8house.html">
+                        <img class="carousel__image" src="/public/img/frise/frise2.webp" alt="8 House">
 
-                </a>
-                <p class="carousel__texte">8 House
-                    <br>
-                    2010
-                </p>
+                    </a>
+                    <p class="carousel__texte">8 House
+                        <br>
+                        2010
+                    </p>
+                </div>
+                <div id="ecran-3" class="carousel__element">
+                    <a href="/en/superkilen.html">
+                        <img class="carousel__image" src="/public/img/frise/frise3.webp" alt="Superkilen">
+                    </a>
+                    <p class="carousel__texte">Superkilen
+                        <br>
+                        2012
+                    </p>
+                </div>
+                <div class="carousel__element">
+                    <a href="/en/maritimemuseum.html">
+                        <img class="carousel__image" src="/public/img/frise/frise4.webp" alt="Danish Maritime Museum">
+                    </a>
+                    <p class="carousel__texte">Danish Maritime Museum
+                        <br>
+                        2013
+                    </p>
+                </div>
+                <div class="carousel__element">
+                    <a href="/en/pyramide.html">
+                        <img class="carousel__image" src="/public/img/frise/frise5.webp" alt="Via 57 West">
+                    </a>
+                    <p class="carousel__texte">Via 57 West
+                        <br>
+                        2016
+                    </p>
+                </div>
+                <div class="carousel__element">
+                    <a href="/en/legohouse.html">
+                        <img class="carousel__image" src="/public/img/frise/frise6.webp" alt="Lego House">
+                    </a>
+                    <p class="carousel__texte">LEGO House
+                        <br>
+                        2017
+                    </p>
+                </div>
+                <div class="carousel__element">
+                    <a href="/en/amagerbakke.html">
+                        <img class="carousel__image" src="/public/img/frise/frise7.webp" alt="Amager Bakke">
+                    </a>
+                    <p class="carousel__texte">Amager Bakke
+                        <br>
+                        2017
+                    </p>
+                </div>
+                <div class="carousel__element">
+                    <a href="/en/twist.html">
+                        <img class="carousel__image" src="/public/img/frise/frise8.webp" alt="Kistefos Museum">
+                    </a>
+                    <p class="carousel__texte">Kistefos Museum
+                        <br>
+                        2019
+                    </p>
+                </div>
             </div>
-            <div class="carousel__element">
-                <a href="/en/superkilen.html">
-                    <img class="carousel__image" src="/public/img/frise/frise3.webp" alt="Superkilen">
-                </a>
-                <p class="carousel__texte">Superkilen
-                    <br>
-                    2012
-                </p>
-            </div>
-            <div class="carousel__element">
-                <a href="/en/maritimemuseum.html">
-                    <img class="carousel__image" src="/public/img/frise/frise4.webp" alt="Danish Maritime Museum">
-                </a>
-                <p class="carousel__texte">Danish Maritime Museum
-                    <br>
-                    2013
-                </p>
-            </div>
-            <div class="carousel__element">
-                <a href="/en/pyramide.html">
-                    <img class="carousel__image" src="/public/img/frise/frise5.webp" alt="Via 57 West">
-                </a>
-                <p class="carousel__texte">Via 57 West
-                    <br>
-                    2016
-                </p>
-            </div>
-            <div class="carousel__element">
-                <a href="/en/legohouse.html">
-                    <img class="carousel__image" src="/public/img/frise/frise6.webp" alt="Lego House">
-                </a>
-                <p class="carousel__texte">LEGO House
-                    <br>
-                    2017
-                </p>
-            </div>
-            <div class="carousel__element">
-                <a href="/en/amagerbakke.html">
-                    <img class="carousel__image" src="/public/img/frise/frise7.webp" alt="Amager Bakke">
-                </a>
-                <p class="carousel__texte">Amager Bakke
-                    <br>
-                    2017
-                </p>
-            </div>
-            <div class="carousel__element">
-                <a href="/en/twist.html">
-                    <img class="carousel__image" src="/public/img/frise/frise8.webp" alt="Kistefos Museum">
-                </a>
-                <p class="carousel__texte">Kistefos Museum
-                    <br>
-                    2019
-                </p>
-            </div>
-
         </div>
     </main>
 
