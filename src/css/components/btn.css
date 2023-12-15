@@ -12,3 +12,9 @@
     gap: var(--space2x);
     border-radius: 5px;
 }
+
+.btn-fin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
