@@ -1,59 +1,87 @@
-#contact-form {
-    color: var(--blanc);
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 10px;
-}
-
-
-input,
-textarea {
-    display: flex;
-    width: 50%;
-
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: var(--gris);
-}
-
-
-.form-btn {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: var(--boutton);
-    color: var(--blanc);
-    letter-spacing: var(--letter-spacing);
-    background-color: var(--beige-intermediaire);
-    padding: var(--space2x) var(--space3x);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space2x);
-    border-radius: 5px;
-}
-
-
-
-.form-group-checkbox {
+.formulaire {
     display: flex;
     flex-direction: column;
-    margin-left: -30px;
+    align-items: right;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--noir-primaire);
 }
 
-.container-form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+.formulairenom {
+    font-family: var(--body-petit);
+    color: var(--blanc);
 }
 
-.container-form label {
-    margin-left: -45px;
-    /* Ajustez cette valeur pour contrôler l'espace entre la case à cocher et le label */
+.nomtext {
+    background-color: var(--noir);
+    font-family: var(--body-petit);
+    width: 60%;
+    height: 30px;
+    border-color: var(--beige-intermediaire);
+    border-radius: 10px;
+    color: var(--blanc);
+}
+
+.prenomtext {
+    background-color: var(--noir);
+    font-family: var(--body-petit);
+    width: 60%;
+    height: 30px;
+    border-color: var(--beige-intermediaire);
+    border-radius: 10px;
+    color: var(--blanc);
+}
+
+.emailtext {
+    background-color: var(--noir);
+    font-family: var(--body-petit);
+    width: 100%;
+    height: 30px;
+    border-color: var(--beige-intermediaire);
+    border-radius: 10px;
+    color: var(--blanc);
+}
+
+.numerotext {
+    background-color: var(--noir);
+    font-family: var(--body-petit);
+    width: 100%;
+    height: 30px;
+    border-color: var(--beige-intermediaire);
+    border-radius: 10px;
+    color: var(--blanc);
+}
+
+.messagetext {
+    background-color: var(--noir);
+    font-family: var(--body-petit);
+    width: 100%;
+    height: 100px;
+    border-color: var(--beige-intermediaire);
+    border-radius: 10px;
+    color: var(--blanc);
+}
+
+.formulairenom>span {
+    font-family: var(--body-petit);
+    color: var(--gris-clair);
+}
+
+.formulairecontainer {
+    text-align: center;
+
+}
+
+.formulaire__btn {
+    background-color: var(--beige-intermediaire);
+    font-family: 'paytone one';
+    color: var(--beige-intermediaire);
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: var(--beige-intermediaire);
+    margin-top: 10px auto;
 }
