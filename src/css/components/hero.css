@@ -29,7 +29,6 @@
 
 .hero__chapo,
 .chapo {
-    min-height: 20svh;
     display: flex;
     align-items: center;
     justify-content: center;
