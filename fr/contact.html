@@ -74,87 +74,89 @@
         </div>
 
         <section>
-
-            <form action="#">
-                <div>
-                    <label for="nom-complet">Nom complet</label>
-                    <input type="text" name="nom-complet" id="nom-complet" placeholder="Ex : Poilâne Mélissa" />
+            <!-- HTML code for the form structure -->
+            <form id="contact-form" method="post">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" placeholder="Ex : Poilâne Mélissa" required>
                 </div>
-                <div>
-                    <label for="e-mail">Adresse E-Mail</label>
-                    <input type="text" name="e-mail" id="e-mail" placeholder="Ex : melissa@gmail.com" />
+                <div class="form-group">
+                    <label for="email">Adresse E-Mail</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: melissa@gmail.com" required>
                 </div>
-                <div>
-                    <label for="objet">Objet Du Message</label>
-                    <input type="text" name="objet" id="objet" placeholder="Ex : Demande d'information" />
+                <div class="form-group">
+                    <label for="subject">Objet Du Message</label>
+                    <input type="text" id="subject" name="subject"
+                        placeholder="Ex: “Demande d’information”, “Support technique”..." required>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5"
-                        placeholder="Ex : ce site est vraiment génial!"></textarea>
+                    <textarea id="message" name="message" placeholder="Ex : ce site est vraiment génial!"
+                        required></textarea>
                 </div>
-                <p>En utilisant ce formulaire, vous acceptez notre Politique de Confidentialité et nos Conditions
-                    d'Utilisation</p>
-                <div>
-                    <input type="checkbox" id="option1" name="option1" value="Option1">
-                    <label for="option1">J'accepte de recevoir des communications de la part de «Ingels Scape»</label>
-                </div>
+                <div class="form-group-checkbox">
+                    <div class="container-form">
+                        <input type="checkbox" id="optin" name="optin" value="yes">
 
-                <div>
-                    <input type="checkbox" id="option2" name="option2" value="Option2">
-                    <label for="option2">Je consens au stockage de mes informations conformément à notre Politique de
-                        Confidentialité.</label>
+                        <label for="optin">J’accepte de recevoir des communications de la part de «Ingles Scape»</label>
+                    </div>
+                    <div class="container-form">
+                        <input type="checkbox" id="consent" name="consent" value="yes">
+                        <label for="consent">Je consens au stockage de mes informations conformément à notre Politique
+                            de
+                            Confidentialité</label>
+                    </div>
                 </div>
-                <button type="submit">Send</button>
+                <div class="form-group  btn-fin">
+                    <button class="form-btn" type="submit" id="submit">ENVOYER !</button>
+                </div>
             </form>
-        </section>
 
-    </main>
-    <footer class="footer">
-        <div class="footer__debut">
-            <a href="/fr/index.html">
-                <img src="/public/icones/logosite.svg" alt="Logo du site">
-            </a>
-            <p>Ingels Scape</p>
-        </div>
-        <nav class="footer__menu">
-            <h4 class="footer__titre">MENU</h4>
-            <ul class="footer__liste list-unstyled">
-                <li><a href="/fr/infoslegales.html">Informations légales</a></li>
-                <li><a href="/fr/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="footer__social">
-            <h4 class="footer__titre">Nous suivre</h4>
-            <ul class="footer__liste--social list--unstyled">
-                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
-                        <img src="/public/icones/instagram.svg" alt="icone instagram">
-                    </a></li>
-                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
-                        <img src="/public/icones/twitter.svg" alt="icone twitter">
-                    </a></li>
-                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
-                        <img src="/public/icones/facebook.svg" alt="icone facebook">
-                    </a></li>
-                <li><a href="https://big.dk/">
-                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
-                    </a></li>
-            </ul>
-        </div>
-        <div class="footer__fin">
-            <img src="/public/icones/logommi.svg" alt="logo MMI">
-            <p>Mélissa Poilâne - A1
-            </p>
-            <div class="footer__fin--langue">
-                <img src="/public/icones/FRactif.svg" alt="logo français">
-                <nav>
-                    <a href="/en/index.html">
-                        <img src="/public/icones/ENinactif.svg" alt="logo anglais">
+            <footer class="footer">
+                <div class="footer__debut">
+                    <a href="/fr/index.html">
+                        <img src="/public/icones/logosite.svg" alt="Logo du site">
                     </a>
+                    <p>Ingels Scape</p>
+                </div>
+                <nav class="footer__menu">
+                    <h4 class="footer__titre">MENU</h4>
+                    <ul class="footer__liste list-unstyled">
+                        <li><a href="/fr/infoslegales.html">Informations légales</a></li>
+                        <li><a href="/fr/contact.html">Contact</a></li>
+                    </ul>
                 </nav>
-            </div>
-        </div>
-    </footer>
+                <div class="footer__social">
+                    <h4 class="footer__titre">Nous suivre</h4>
+                    <ul class="footer__liste--social list--unstyled">
+                        <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                                <img src="/public/icones/instagram.svg" alt="icone instagram">
+                            </a></li>
+                        <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                                <img src="/public/icones/twitter.svg" alt="icone twitter">
+                            </a></li>
+                        <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                                <img src="/public/icones/facebook.svg" alt="icone facebook">
+                            </a></li>
+                        <li><a href="https://big.dk/">
+                                <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="footer__fin">
+                    <img src="/public/icones/logommi.svg" alt="logo MMI">
+                    <p>Mélissa Poilâne - A1
+                    </p>
+                    <div class="footer__fin--langue">
+                        <img src="/public/icones/FRactif.svg" alt="logo français">
+                        <nav>
+                            <a href="/en/index.html">
+                                <img src="/public/icones/ENinactif.svg" alt="logo anglais">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
 </body>
 
 </html>

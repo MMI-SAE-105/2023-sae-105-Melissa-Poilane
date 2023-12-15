@@ -1,0 +1,59 @@
+#contact-form {
+    color: var(--blanc);
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+
+input,
+textarea {
+    display: flex;
+    width: 50%;
+
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--gris);
+}
+
+
+.form-btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--boutton);
+    color: var(--blanc);
+    letter-spacing: var(--letter-spacing);
+    background-color: var(--beige-intermediaire);
+    padding: var(--space2x) var(--space3x);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space2x);
+    border-radius: 5px;
+}
+
+
+
+.form-group-checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-left: -30px;
+}
+
+.container-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.container-form label {
+    margin-left: -45px;
+    /* Ajustez cette valeur pour contrôler l'espace entre la case à cocher et le label */
+}
