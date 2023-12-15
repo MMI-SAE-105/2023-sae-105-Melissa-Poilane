@@ -1,0 +1,14 @@
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--boutton);
+    color: var(--blanc);
+    letter-spacing: var(--letter-spacing);
+    border: 1px solid var(--blanc);
+    padding: var(--space2x) var(--space3x);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space2x);
+    border-radius: 5px;
+}
