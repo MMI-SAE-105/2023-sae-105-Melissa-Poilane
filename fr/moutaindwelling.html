@@ -25,8 +25,7 @@
                 <span class="menu-btn__hamburger"></span>
             </button>
 
-            <nav class="header__menu menu" id="mainNav" x-show="menuIsOpen" x-transition.duration.500ms
-                style="display : none">
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
                 <ul class="menu__liste list-unstyled">
                     <li class="menu__titre">
                         <a class="menu__lien" href="/fr/index.html">Accueil</a>
