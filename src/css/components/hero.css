@@ -8,6 +8,26 @@
     padding-bottom: var(--space5x);
 }
 
+.heroarticle__debut {
+    height: 70vh;
+    position: relative;
+    color: var(--blanc);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: var(--space5x);
+}
+
+.heroautre {
+    height: 50vh;
+    position: relative;
+    color: var(--blanc);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: var(--space5x);
+}
+
 .hero__image {
     position: absolute;
     inset: 0;
