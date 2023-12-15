@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>Ingels Scape</title>
     <link rel="icon" href="/public/icones/logosite.svg">
     <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="alternate" hreflang="fr" href="/fr/contact.html">
+    <link rel="alternate" hreflang="en" href="/en/contact.html">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -64,7 +64,7 @@
     <main>
         <div class="heroautre">
             <div class="heroautre__debut container">
-                <h1 class="hero__titre">Contactez-nous !</h1>
+                <h1 class="hero__titre">Get in touch with us!</h1>
 
                 <figure class="hero__image traitement">
                     <img src="/public/img/contact.webp" alt="image de la facade d'un batiment">
@@ -77,38 +77,37 @@
             <!-- HTML code for the form structure -->
             <form id="contact-form" method="post">
                 <div class="form-group">
-                    <label for="name">Nom complet</label>
+                    <label for="name">Full name</label>
                     <input type="text" id="name" name="name" placeholder="Ex : Poilâne Mélissa" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Adresse E-Mail</label>
+                    <label for="email">Email address</label>
                     <input type="email" id="email" name="email" placeholder="Ex: melissa@gmail.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="subject">Objet Du Message</label>
+                    <label for="subject">Subject of the Message</label>
                     <input type="text" id="subject" name="subject"
-                        placeholder="Ex: “Demande d’information”, “Support technique”..." required>
+                        placeholder="Ex: Demand for information, Technical support..." required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Ex : ce site est vraiment génial!"
+                    <textarea id="message" name="message" placeholder="Ex : This website is really awesome!"
                         required></textarea>
                 </div>
                 <div class="form-group-checkbox">
                     <div class="container-form">
                         <input type="checkbox" id="optin" name="optin" value="yes">
 
-                        <label for="optin">J’accepte de recevoir des communications de la part de «Ingles Scape»</label>
+                        <label for="optin">I agree to receive communications from 'Ingles Scape'.</label>
                     </div>
                     <div class="container-form">
                         <input type="checkbox" id="consent" name="consent" value="yes">
-                        <label for="consent">Je consens au stockage de mes informations conformément à notre Politique
-                            de
-                            Confidentialité</label>
+                        <label for="consent">I consent to the storage of my information in accordance with our Privacy
+                            Policy.</label>
                     </div>
                 </div>
                 <div class="form-group  btn-fin">
-                    <button class="form-btn" type="submit" id="submit">ENVOYER !</button>
+                    <button class="form-btn" type="submit" id="submit">SEND !</button>
                 </div>
             </form>
 
