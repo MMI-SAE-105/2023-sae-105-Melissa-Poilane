@@ -18,6 +18,7 @@ h3 {
   font-weight: 700;
   line-height: 39.6px;
   color: var(--blanc-primaire);
+  margin-bottom: var(--space1x);
 }
 
 h1 {
@@ -30,6 +31,12 @@ h2 {
 
 h3 {
   font-size: var(--heading-moyen);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--space2x);
 }
 
 button {
