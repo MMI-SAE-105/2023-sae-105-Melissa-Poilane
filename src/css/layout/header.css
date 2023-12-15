@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: var(--space4x) var(--space6x);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header--atTop {
+    background-color: var(--noir-primaire);
+}
+
+.header__fin {
+    display: flex;
+    gap: var(--space2x);
+    align-items: center;
+}
+
+.header__debut {
+    display: block;
+    z-index: 3;
+}
