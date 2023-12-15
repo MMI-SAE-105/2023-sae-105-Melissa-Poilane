@@ -28,6 +28,13 @@
     padding-bottom: var(--space5x);
 }
 
+/*
+class="image"
+
+class="btn-fin"
+
+class="btn"
+*/
 .hero__image {
     position: absolute;
     inset: 0;
