@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>Ingels Scape</title>
     <link rel="icon" href="/public/icones/logosite.svg">
     <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="alternate" hreflang="en" href="/en/contact.html">
+    <link rel="alternate" hreflang="fr" href="/fr/contact.html">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -15,7 +15,7 @@
     <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
         :class="{ 'header--atTop' : }">
         <div class="header__debut">
-            <a href="/en/index.html">
+            <a href="/fr/index.html">
                 <img src="/public/icones/logosite.svg" alt="Logo du site">
             </a>
         </div>
@@ -28,34 +28,34 @@
             <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
                 <ul class="menu__liste list-unstyled">
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/index.html">Home</a>
+                        <a class="menu__lien" href="/fr/index.html">Accueil</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                        <a class="menu__lien" href="/fr/architecte.html">Bjarke Ingels</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                        <a class="menu__lien" href="/fr/8house.html">8 House</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                        <a class="menu__lien" href="/fr/maritimemuseum.html">Maritime Museum</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                        <a class="menu__lien" href="/fr/moutaindwelling.html">Mountain Dwelling</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                        <a class="menu__lien" href="/fr/legohouse.html">LEGO House</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                        <a class="menu__lien" href="/fr/amagerbakke.html">Amager Bakke</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                        <a class="menu__lien" href="/fr/superkilen.html">Superkilen</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                        <a class="menu__lien" href="/fr/twist.html">Kistefos Museum</a>
                     </li>
                     <li class="menu__titre">
-                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                        <a class="menu__lien" href="/fr/pyramide.html">Via 57 West</a>
                     </li>
                 </ul>
             </nav>
@@ -64,7 +64,7 @@
     <main>
         <div class="heroautre">
             <div class="heroautre__debut container">
-                <h1 class="hero__titre">Get in touch with us!</h1>
+                <h1 class="hero__titre">Contactez-nous !</h1>
 
                 <figure class="hero__image traitement">
                     <img src="/public/img/contact.webp" alt="image de la facade d'un batiment">
@@ -72,91 +72,81 @@
             </div>
 
         </div>
+        <form class="formulaire" action="/submit_contact" method="post">
+            <p>
+                <label class="formulairenom" for="prenom">Votre prénom <span>*</span></label><br>
+                <input class="prenomtext" type="text" id="prenom" name="prenom" value="Prénom (ex: Albane)"><br>
+            </p>
+            <p>
+                <label class="formulairenom" for="nom">Votre nom <span>*</span></label><br>
+                <input class="nomtext" type="text" id="nom" name="nom" value="Nom (ex: Dupont)"><br>
+            </p>
+            <p>
+                <label class="formulairenom" for="email">E-mail <span>*</span></label><br>
+                <input class="emailtext" type="email" id="email" name="email"
+                    value="E-mail (ex: albane.dupont@gmail.com)"><br>
+            </p>
+            <p>
+                <label class="formulairenom" for="numero">Votre numéro de smartphone</label><br>
+                <input class="numerotext" type="numero" id="numero" name="email"
+                    value="Numéro (ex: 07.49.12.10.10)"><br>
+            </p>
+            <p>
+                <label class="formulairenom" for="message">Message <span>*</span></label><br>
+                <textarea class="messagetext" name="message">Indique votre message</textarea><br>
+            </p>
+            <div class="formulairecontainer">
+                <p>
+                    <input class="formulairebtn " type="submit" value="Envoyer">
+                </p>
+            </div>
+        </form>
 
-        <section>
-            <!-- HTML code for the form structure -->
-            <form id="contact-form" method="post">
-                <div class="form-group">
-                    <label for="name">Full name</label>
-                    <input type="text" id="name" name="name" placeholder="Ex : Poilâne Mélissa" required>
+        <footer class="footer">
+            <div class="footer__debut">
+                <a href="/fr/index.html">
+                    <img src="/public/icones/logosite.svg" alt="Logo du site">
+                </a>
+                <p>Ingels Scape</p>
+            </div>
+            <nav class="footer__menu">
+                <h4 class="footer__titre">MENU</h4>
+                <ul class="footer__liste list-unstyled">
+                    <li><a href="/fr/infoslegales.html">Informations légales</a></li>
+                    <li><a href="/fr/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer__social">
+                <h4 class="footer__titre">Nous suivre</h4>
+                <ul class="footer__liste--social list--unstyled">
+                    <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                            <img src="/public/icones/instagram.svg" alt="icone instagram">
+                        </a></li>
+                    <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                            <img src="/public/icones/twitter.svg" alt="icone twitter">
+                        </a></li>
+                    <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                            <img src="/public/icones/facebook.svg" alt="icone facebook">
+                        </a></li>
+                    <li><a href="https://big.dk/">
+                            <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="footer__fin">
+                <img src="/public/icones/logommi.svg" alt="logo MMI">
+                <p>Mélissa Poilâne - A1
+                </p>
+                <div class="footer__fin--langue">
+                    <img src="/public/icones/FRactif.svg" alt="logo français">
+                    <nav>
+                        <a href="/en/index.html">
+                            <img src="/public/icones/ENinactif.svg" alt="logo anglais">
+                        </a>
+                    </nav>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" id="email" name="email" placeholder="Ex: melissa@gmail.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject of the Message</label>
-                    <input type="text" id="subject" name="subject"
-                        placeholder="Ex: Demand for information, Technical support..." required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Ex : This website is really awesome!"
-                        required></textarea>
-                </div>
-                <div class="form-group-checkbox">
-                    <div class="container-form">
-                        <input type="checkbox" id="optin" name="optin" value="yes">
-
-                        <label for="optin">I agree to receive communications from 'Ingles Scape'.</label>
-                    </div>
-                    <div class="container-form">
-                        <input type="checkbox" id="consent" name="consent" value="yes">
-                        <label for="consent">I consent to the storage of my information in accordance with our Privacy
-                            Policy.</label>
-                    </div>
-                </div>
-                <div class="form-group  btn-fin">
-                    <button class="form-btn" type="submit" id="submit">SEND !</button>
-                </div>
-            </form>
-
-            <footer class="footer">
-                <div class="footer__debut">
-                    <a href="/en/index.html">
-                        <img src="/public/icones/logosite.svg" alt="Logo du site">
-                    </a>
-                    <p>Ingels Scape</p>
-                </div>
-                <nav class="footer__menu">
-                    <h4 class="footer__titre">MENU</h4>
-                    <ul class="footer__liste list-unstyled">
-                        <li><a href="/en/infoslegales.html">Legal information</a></li>
-                        <li><a href="/en/contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="footer__social">
-                    <h4 class="footer__titre">Follow us</h4>
-                    <ul class="footer__liste--social list--unstyled">
-                        <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
-                                <img src="/public/icones/instagram.svg" alt="icone instagram">
-                            </a></li>
-                        <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
-                                <img src="/public/icones/twitter.svg" alt="icone twitter">
-                            </a></li>
-                        <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
-                                <img src="/public/icones/facebook.svg" alt="icone facebook">
-                            </a></li>
-                        <li><a href="https://big.dk/">
-                                <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
-                            </a></li>
-                    </ul>
-                </div>
-                <div class="footer__fin">
-                    <img src="/public/icones/logommi.svg" alt="logo MMI">
-                    <p>Mélissa Poilâne - A1
-                    </p>
-                    <div class="footer__fin--langue">
-                        <img src="/public/icones/ENactif.svg" alt="logo anglais">
-
-                        <nav>
-                            <a href="/fr/index.html">
-                                <img src="/public/icones/FRinactif.svg" alt="logo français">
-                            </a>
-                        </nav>
-                    </div>
-                </div>
-            </footer>
+            </div>
+        </footer>
 </body>
 
 </html>
