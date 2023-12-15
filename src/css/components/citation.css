@@ -1,5 +1,5 @@
 .citation {
-
+    padding-top: var(--space1x);
     color: var(--blanc);
     border-top: 2px solid var(--beige-intermediaire);
     border-bottom: 2px solid var(--beige-intermediaire);
