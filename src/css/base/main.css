@@ -8,6 +8,7 @@ body {
   font-family: var(--font-PT);
   line-height: 27px;
   background-color: var(--noir-primaire);
+  color: var(--gris-clair);
 }
 
 h1,
@@ -16,6 +17,7 @@ h3 {
   font-family: var(--font-nunito);
   font-weight: 700;
   line-height: 39.6px;
+  color: var(--blanc-primaire);
 }
 
 h1 {

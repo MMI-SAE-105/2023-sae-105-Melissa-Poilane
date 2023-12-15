@@ -1,0 +1,17 @@
+.citation {
+
+    color: var(--blanc);
+    border-top: 2px solid var(--beige-intermediaire);
+    border-bottom: 2px solid var(--beige-intermediaire);
+    padding-bottom: var(--space1x);
+}
+
+.citation__texte {
+    text-align: center;
+    font-size: var(--body-moyen);
+}
+
+.citation__nom {
+    font-size: var(--body-moyen-moins);
+    text-align: right;
+}

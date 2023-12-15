@@ -1,13 +1,18 @@
 .carrousel {
     display: flex;
-    width: 100%;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory; 
+    scroll-snap-type: x mandatory;
     position: relative;
     text-align: center;
-    gap: 20px;
-  }
+    gap: 30px;
+    margin-left: var(--space3x);
+}
+
+.carrousel__titre {
+    margin-left: var(--space3x);
+}
+
 .carousel__image {
 
     display: block;
@@ -26,6 +31,12 @@
 
 .carousel__element figure {
     margin: 0;
+}
+
+.carousel__texte {
+    color: var(--gris);
+    font-size: var(--body-moyen-moins);
+    text-align: center;
 }
 
 /*
@@ -66,4 +77,3 @@
 .carousel::-webkit-scrollbar-thumb {
     background-color: var(--blanc);
 }
-

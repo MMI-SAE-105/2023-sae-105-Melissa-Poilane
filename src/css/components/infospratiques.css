@@ -1,0 +1,32 @@
+.informations {
+    border-top: 2px solid var(--beige-intermediaire);
+}
+
+.informations__titre {
+    font-size: var(--heading-moyen);
+    margin-bottom: var(--space1x);
+    text-align: center;
+}
+
+
+.info__image {
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+
+
+.informations__sou-titre {
+    margin: 0;
+    padding: 0;
+    color: var(--beige-intermediaire);
+}
+
+.info>p {
+    margin-top: 0;
+    margin-bottom: var(--space2x);
+}
+
+.info>p>span {
+    color: var(--beige-intermediaire);
+}

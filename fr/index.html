@@ -66,11 +66,13 @@
     <main>
         <div class="hero">
             <div class="hero__debut container">
-                <h1 class="hero__titre">Ingels Scape</h1>
-                <a class="hero__boutton btn" href="#">
-                    <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
-                    Réserver un billet
-                </a>
+                <div>
+                    <h1 class="hero__titre">Ingels Scape</h1>
+                    <a class="hero__boutton btn" href="#">
+                        <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                        Réserver un billet
+                    </a>
+                </div>
                 <figure class="hero__image traitement">
                     <img src="/public/img/accueil/imageaccueil1.webp" alt="image de l'architecte">
                 </figure>
@@ -88,7 +90,9 @@
             <p class="citation__texte">“I don't have to come up with the best idea. It is my job to make sure that it is
                 always the best idea
                 that wins.”</p>
-            <footer><cite class="citation__nom">Bjarke Ingels</cite></footer>
+            <footer>
+                <cite class="citation__nom">Bjarke Ingels</cite>
+            </footer>
         </blockquote>
 
         <!--
@@ -99,7 +103,10 @@
         <button class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant"
             @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth; ">&gt;</button>
 -->
+        <h2 class="carrousel__titre">Les oeuvre de Bjarke Ingels</h2>
         <div class="carrousel">
+
+
             <div class="carousel__element">
                 <a href="/fr/moutaindwelling.html">
                     <img class="carousel__image" src="/public/img/frise/frise1.webp" alt="moutain dwelling">
@@ -184,7 +191,7 @@
                 (BIG),
                 défie les
                 conventions pour créer des bâtiments emblématiques qui transcendent les frontières du design.</p>
-            <img src="/public/img/accueil/imageaccueil2.webp" alt="image de Bjarke Ingels">
+            <img class="image" src="/public/img/accueil/imageaccueil2.webp" alt="image de Bjarke Ingels">
             <p>Cette exposition immersive met en lumière une sélection minutieuse des projets les plus marquants de
                 Bjarke
                 Ingels,
@@ -200,41 +207,52 @@
                 manière
                 inédite, et son engagement envers la durabilité environnementale.</p>
         </div>
-        <div class="container">
-            <h2>Informations pratiques</h2>
-            <figure class="info">
-                <img class="info__image" src="/public/img/accueil/imageaccueil3.webp"
-                    alt="image de la fondation cartier">
-                <figcaption class="info__texte">Fondation Cartier</figcaption>
-            </figure>
-            <h3>Lieu</h3>
-            <p>Fondation Cartier
-                <br>
-                261 Bd Raspail
-                <br>
-                75014 Paris
-            </p>
-            <h3>Date</h3>
-            <p>Du 13 avril au 23 juin 2024</p>
-            <h3>Horaires d’ouverture</h3>
-            <p>Tous les jours de 11h à 20h, sauf le lundi.
-                <br>
-                Nocturne le mardi, jusqu'à 22h.
-                <br>
-                La fermeture des salles débute à 19h45 (21h45 les mardis).
-            </p>
-            <h3>Tarifs</h3>
-            <p>Plein tarif : 11€
-                <br>
-                Tarif réduit : 7,50€
-                <br>
-                Réduction 13 - 25 ans : 5€
-                <br>
-                Fondation Cartier Pass : 18€ - 50€
-                <br>
-                Moins de 13 ans, Laissez-passer annuel,
-                carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants : Gratuit
-            </p>
+        <div class="container ">
+            <div class="informations">
+                <h2 class="informations__titre">Informations pratiques</h2>
+                <figure>
+                    <img class="info__image" src="/public/img/accueil/imageaccueil3.webp"
+                        alt="image de la fondation cartier">
+                    <figcaption class="info__texte">Fondation Cartier</figcaption>
+                </figure>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Lieu</h3>
+                    <p>Fondation Cartier
+                        <br>
+                        261 Bd Raspail
+                        <br>
+                        75014 Paris
+                    </p>
+                </div>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Date</h3>
+                    <p>Du 13 avril au 23 juin 2024</p>
+                </div>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Horaires d’ouverture</h3>
+                    <p>Tous les jours de 11h à 20h, sauf le lundi.
+                        <br>
+                        Nocturne le mardi, jusqu'à 22h.
+                        <br>
+                        La fermeture des salles débute à 19h45 (21h45 les mardis).
+                    </p>
+                </div>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Tarifs</h3>
+                    <p>Plein tarif : <span>11€</span>
+                        <br>
+                        Tarif réduit : <span>7,50€</span>
+                        <br>
+                        Réduction 13 - 25 ans : <span>5€</span>
+                        <br>
+                        Fondation Cartier Pass : <span>18€ - 50€</span>
+                        <br>
+                        Moins de 13 ans, Laissez-passer annuel,
+                        carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants :
+                        <span>Gratuit</span>
+                    </p>
+                </div>
+            </div>
         </div>
         <a href="#">
             <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
