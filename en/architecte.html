@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingels Scape</title>
+    <link rel="icon" href="/public/icones/logosite.svg">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="alternate" hreflang="fr" href="/fr/architecte.html">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
+        <div class="header__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+        </div>
+        <div class="header__fin">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__hamburger"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/index.html">Home</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="heroarticle">
+            <div class="heroarticle__debut container">
+                <h1 class="hero__titre">Bjarke Ingels</h1>
+
+                <figure class="hero__image traitement">
+                    <img src="/public/img/architecte/architecte1.webp" alt="image de l'architecte">
+                </figure>
+            </div>
+
+            <div class="hero__chapo chapo container">
+                <p class="chapo__text">Bjarke Ingels révolutionne l'architecture en créant des environnements alliant
+                    besoins pratiques et
+                    expériences émotionnelles.</p>
+            </div>
+        </div>
+
+        <section class="container">
+            <img class="image" src="/public/img/architecte/architecte2.webp" alt="image de l'architecte">
+
+            <h3>Exploration des Idées et de l'Innovation</h3>
+            <p>Bjarke Ingels, né au Danemark en 1974, a conquis le monde de l'architecture avec sa vision innovante. En
+                tant
+                que fondateur de BIG (Bjarke Ingels Group), il s'efforce de réinventer la façon dont nous pensons et
+                vivons
+                l'architecture. Sa capacité à intégrer l'environnement naturel dans ses créations est exemplaire.
+                L'exposition de Mountain Dwellings, où les voitures deviennent une partie intégrante de la structure,
+                illustre parfaitement cette intégration astucieuse.</p>
+        </section>
+        <section class="container">
+            <figure>
+                <img class="image" src="/public/img/architecte/architecte3.webp" alt="Musée Atelier Audemars Piguet">
+                <figcaption>Musée Atelier Audemars Piguet</figcaption>
+            </figure>
+
+            <h3>Fusion de Forme et de Fonction</h3>
+            <p>Ingels redéfinit la relation entre forme et fonction, comme démontré par le Danish Maritime Museum à
+                Helsingør, où l'architecture moderne rencontre l'histoire maritime danoise. Ses réalisations ne sont pas
+                seulement des bâtiments, mais des espaces qui racontent des histoires, invitent à l'interaction et
+                repoussent les limites de la conception architecturale traditionnelle.</p>
+        </section>
+        <section class="container">
+            <figure>
+                <img class="image" src="/public/img/architecte/architecte4.webp" alt="Distillerie Blue Run Kentucky">
+                <figcaption>Distillerie Blue Run Kentucky</figcaption>
+            </figure>
+
+            <h3>L'héritage Durable de l'Innovation</h3>
+            <p>Au cœur de ses réalisations, Ingels promeut la durabilité et l'écologie. L'Amager Bakke à Copenhague, une
+                centrale de valorisation énergétique avec une piste de ski artificielle, est un témoignage vivant de cet
+                engagement envers l'environnement. Cette fusion entre le fonctionnel et l'éco-responsable est un pilier
+                de
+                ses créations, démontrant ainsi sa vision holistique de l'architecture.</p>
+        </section>
+        <div class="btn-fin">
+            <a class="btn" href="https://fr.wikipedia.org/wiki/Bjarke_Ingels">
+                <img class="image" src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                En savoir plus
+            </a>
+        </div>
+        <h3>Les oeuvres principales de Bjarke Ingels </h3>
+        <!--
+            <button class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"
+                    @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth; ">
+                    &lt;</button>
+        
+                <button class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant"
+                    @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth; ">&gt;</button>
+        -->
+        <h2 class="carrousel__titre">Les oeuvre de Bjarke Ingels</h2>
+        <div class="carrousel">
+
+
+            <div class="carousel__element">
+                <a href="/fr/moutaindwelling.html">
+                    <img class="carousel__image" src="/public/img/frise/frise1.webp" alt="moutain dwelling">
+
+                </a>
+                <p class="carousel__texte">Mountain Dwellings
+                    <br>
+                    2005
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/fr/8house.html">
+                    <img class="carousel__image" src="/public/img/frise/frise2.webp" alt="8 House">
+
+                </a>
+                <p class="carousel__texte">8 House
+                    <br>
+                    2010
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/fr/superkilen.html">
+                    <img class="carousel__image" src="/public/img/frise/frise3.webp" alt="Superkilen">
+                </a>
+                <p class="carousel__texte">Superkilen
+                    <br>
+                    2012
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/fr/maritimemuseum.html">
+                    <img class="carousel__image" src="/public/img/frise/frise4.webp" alt="Danish Maritime Museum">
+                </a>
+                <p class="carousel__texte">Danish Maritime Museum
+                    <br>
+                    2013
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/fr/pyramide.html">
+                    <img class="carousel__image" src="/public/img/frise/frise5.webp" alt="Via 57 West">
+                </a>
+                <p class="carousel__texte">Via 57 West
+                    <br>
+                    2016
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/fr/legohouse.html">
+                    <img class="carousel__image" src="/public/img/frise/frise6.webp" alt="Lego House">
+                </a>
+                <p class="carousel__texte">LEGO House
+                    <br>
+                    2017
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/fr/amagerbakke.html">
+                    <img class="carousel__image" src="/public/img/frise/frise7.webp" alt="Amager Bakke">
+                </a>
+                <p class="carousel__texte">Amager Bakke
+                    <br>
+                    2017
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/fr/twist.html">
+                    <img class="carousel__image" src="/public/img/frise/frise8.webp" alt="Kistefos Museum">
+                </a>
+                <p class="carousel__texte">Kistefos Museum
+                    <br>
+                    2019
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+            <p>Ingels Scape</p>
+        </div>
+        <nav class="footer__menu">
+            <h4 class="footer__titre">MENU</h4>
+            <ul class="footer__liste list-unstyled">
+                <li><a href="/en/infoslegales.html">Legal information</a></li>
+                <li><a href="/en/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__social">
+            <h4 class="footer__titre">Follow us</h4>
+            <ul class="footer__liste--social list--unstyled">
+                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                        <img src="/public/icones/instagram.svg" alt="icone instagram">
+                    </a></li>
+                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                        <img src="/public/icones/twitter.svg" alt="icone twitter">
+                    </a></li>
+                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                        <img src="/public/icones/facebook.svg" alt="icone facebook">
+                    </a></li>
+                <li><a href="https://big.dk/">
+                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer__fin">
+            <img src="/public/icones/logommi.svg" alt="logo MMI">
+            <p>Mélissa Poilâne - A1
+            </p>
+            <div class="footer__fin--langue">
+                <img src="/public/icones/ENactif.svg" alt="logo anglais">
+
+                <nav>
+                    <a href="/fr/index.html">
+                        <img src="/public/icones/FRinactif.svg" alt="logo français">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

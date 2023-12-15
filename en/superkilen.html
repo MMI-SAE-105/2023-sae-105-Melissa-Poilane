@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingels Scape</title>
+    <link rel="icon" href="/public/icones/logosite.svg">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="alternate" hreflang="fr" href="/fr/superkilen.html">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
+        <div class="header__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+        </div>
+        <div class="header__fin">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__hamburger"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/index.html">Home</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="heroarticle">
+            <div class="heroarticle__debut container">
+                <h1 class="hero__titre">Superkilen</h1>
+
+                <figure class="hero__image traitement">
+                    <img src="/public/img/superkilen/super1.webp" alt="image du parc">
+                </figure>
+            </div>
+
+            <div class="hero__chapo chapo container">
+                <p class="chapo__text">Superkilen, parc inauguré en 2012 à Nørrebro, dépasse la simple nature d'espace
+                    vert : c'est une œuvre d'art
+                    collective reflétant la diversité culturelle de Copenhague.</p>
+            </div>
+        </div>
+
+        <section class="container">
+            <img class="image" src="/public/img/superkilen/supper2.webp" alt="image de la partie rose du parc">
+            <h3>La Multiculturalité au Centre de Superkilen </h3>
+            <p>L'une des caractéristiques les plus frappantes de Superkilen est sa diversité culturelle affichée
+                fièrement.
+                Divisé en trois sections distinctes - la place rouge, la place noire et le jardin vert - le parc abrite
+                des
+                éléments provenant de plus de cinquante pays, offrant ainsi une expérience immersive et inclusive.</p>
+        </section>
+        <section class="container">
+            <figure>
+                <img class="image" src="/public/img/superkilen/supper3.webp" alt="Supekilen, vue du ciel">
+                <figcaption>Supekilen, vue du ciel</figcaption>
+            </figure>
+            <h3>Un Patchwork Artistique et Architectural </h3>
+            <p>Chaque élément de Superkilen est soigneusement sélectionné pour représenter l'identité culturelle de sa
+                région d'origine. Des bancs marocains aux fontaines espagnoles en passant par les balançoires afghanes,
+                chaque coin du parc raconte une histoire unique, créant ainsi un espace où les cultures se rencontrent.
+            </p>
+        </section>
+        <section class="container">
+            <img class="image" src="/public/img/superkilen/supper4.webp" alt="image du parc">
+            <h3>Un Lieu de Rencontre et de Célébration </h3>
+            <p>Superkilen sert de lieu de rassemblement pour les habitants et les visiteurs, favorisant les échanges
+                interculturels et offrant une plateforme pour célébrer la diversité. Les événements organisés
+                régulièrement
+                dans le parc reflètent cette volonté de favoriser l'inclusion et le dialogue entre les communautés.</p>
+        </section>
+        <div class="btn-fin">
+            <a class="btn" href="https://fr.wikipedia.org/wiki/Superkilen">
+                <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                En savoir plus
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+            <p>Ingels Scape</p>
+        </div>
+        <nav class="footer__menu">
+            <h4 class="footer__titre">MENU</h4>
+            <ul class="footer__liste list-unstyled">
+                <li><a href="/en/infoslegales.html">Legal information</a></li>
+                <li><a href="/en/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__social">
+            <h4 class="footer__titre">Follow us</h4>
+            <ul class="footer__liste--social list--unstyled">
+                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                        <img src="/public/icones/instagram.svg" alt="icone instagram">
+                    </a></li>
+                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                        <img src="/public/icones/twitter.svg" alt="icone twitter">
+                    </a></li>
+                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                        <img src="/public/icones/facebook.svg" alt="icone facebook">
+                    </a></li>
+                <li><a href="https://big.dk/">
+                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer__fin">
+            <img src="/public/icones/logommi.svg" alt="logo MMI">
+            <p>Mélissa Poilâne - A1
+            </p>
+            <div class="footer__fin--langue">
+                <img src="/public/icones/ENactif.svg" alt="logo anglais">
+
+                <nav>
+                    <a href="/fr/index.html">
+                        <img src="/public/icones/FRinactif.svg" alt="logo français">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

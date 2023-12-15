@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingels Scape</title>
+    <link rel="icon" href="/public/icones/logosite.svg">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="alternate" hreflang="fr" href="/fr/8house.html">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
+        <div class="header__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+        </div>
+        <div class="header__fin">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__hamburger"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/index.html">Home</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="heroarticle">
+            <div class="heroarticle__debut container">
+                <h1 class="hero__titre">8 House</h1>
+
+                <figure class="hero__image traitement">
+                    <img src="/public/img/8house/8house1.webp" alt="image de 8house">
+                </figure>
+            </div>
+
+            <div class="hero__chapo chapo container">
+                <p class="chapo__text">8 House, va au-delà du simple lieu de résidence : cette structure
+                    multifonctionnelle redéfinit le concept
+                    de cohabitation, en incarnant l'évolution de l'architecture contemporaine.</p>
+            </div>
+        </div>
+        <section class="container">
+            <figure>
+                <img class="image" src="/public/img/8house/8house2.webp" alt="">
+                <figcaption>L’intérieur de 8 House</figcaption>
+            </figure>
+            </div>
+            <div>
+                <h3>L'Innovation Architecturale de 8 House</h3>
+                <p>Le 8 House est une fusion unique de formes géométriques audacieuses, de fonctionnalité pratique et de
+                    durabilité environnementale. Sa structure en forme de chiffre 8 se déploie sur un vaste territoire,
+                    englobant des espaces résidentiels, commerciaux et de loisirs. La fluidité de son design favorise
+                    une
+                    interaction harmonieuse entre les habitants et l'environnement.</p>
+        </section>
+        <section class="container">
+            <figure>
+                <img class="image" src="/public/img/8house/8house3.webp" alt="">
+            </figure>
+            </div>
+            <div>
+                <h3>Des Espaces Polyvalents au Service de la Communauté </h3>
+                <p>L'un des aspects remarquables du 8 House réside dans sa conception axée sur la communauté. Ses
+                    espaces
+                    communs, tels que les jardins en terrasse, les aires de jeux pour enfants et les sentiers pédestres,
+                    encouragent les interactions sociales et créent un véritable sentiment de voisinage.</p>
+        </section>
+        <figure class="container">
+            <img class="image" src="/public/img/8house/8house4.webp" alt="">
+        </figure>
+        </div>
+        <div class="btn-fin">
+            <a class="btn" href="https://en.wikipedia.org/wiki/8_House">
+                <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                En savoir plus
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+            <p>Ingels Scape</p>
+        </div>
+        <nav class="footer__menu">
+            <h4 class="footer__titre">MENU</h4>
+            <ul class="footer__liste list-unstyled">
+                <li><a href="/en/infoslegales.html">Legal information</a></li>
+                <li><a href="/en/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__social">
+            <h4 class="footer__titre">Follow us</h4>
+            <ul class="footer__liste--social list--unstyled">
+                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                        <img src="/public/icones/instagram.svg" alt="icone instagram">
+                    </a></li>
+                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                        <img src="/public/icones/twitter.svg" alt="icone twitter">
+                    </a></li>
+                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                        <img src="/public/icones/facebook.svg" alt="icone facebook">
+                    </a></li>
+                <li><a href="https://big.dk/">
+                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer__fin">
+            <img src="/public/icones/logommi.svg" alt="logo MMI">
+            <p>Mélissa Poilâne - A1
+            </p>
+            <div class="footer__fin--langue">
+                <img src="/public/icones/ENactif.svg" alt="logo anglais">
+
+                <nav>
+                    <a href="/fr/index.html">
+                        <img src="/public/icones/FRinactif.svg" alt="logo français">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

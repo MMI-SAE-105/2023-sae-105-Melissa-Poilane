@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Ingels Scape</title>
+    <link rel="icon" href="/public/icones/logosite.svg">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="alternate" hreflang="en" href="/en/index.html">
+
+
+</head>
+
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
+        <div class="header__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+        </div>
+        <div class="header__fin">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__hamburger"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/index.html">Home</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero__debut container">
+                <div>
+                    <h1 class="hero__titre">Ingels Scape</h1>
+                    <a class="hero__boutton btn" href="#">
+                        <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                        Réserver un billet
+                    </a>
+                </div>
+                <figure class="hero__image traitement">
+                    <img src="/public/img/accueil/imageaccueil1.webp" alt="image de l'architecte">
+                </figure>
+            </div>
+
+            <div class="hero__chapo chapo container">
+                <p class="chapo__text">Découvrez l'univers visionnaire de Bjarke Ingels à travers une
+                    exposition
+                    temporaire révélant ses œuvres
+                    emblématiques
+                    repoussant les limites de la conception contemporaine.</p>
+            </div>
+        </div>
+        <blockquote class="citation container">
+            <p class="citation__texte">“I don't have to come up with the best idea. It is my job to make sure that it is
+                always the best idea
+                that wins.”</p>
+            <footer>
+                <cite class="citation__nom">Bjarke Ingels</cite>
+            </footer>
+        </blockquote>
+
+        <!--
+    <button class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"
+            @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth; ">
+            &lt;</button>
+
+        <button class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant"
+            @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth; ">&gt;</button>
+-->
+        <h2 class="carrousel__titre">Les oeuvre de Bjarke Ingels</h2>
+        <div class="carrousel">
+
+
+            <div class="carousel__element">
+                <a href="/en/moutaindwelling.html">
+                    <img class="carousel__image" src="/public/img/frise/frise1.webp" alt="moutain dwelling">
+
+                </a>
+                <p class="carousel__texte">Mountain Dwellings
+                    <br>
+                    2005
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/en/8house.html">
+                    <img class="carousel__image" src="/public/img/frise/frise2.webp" alt="8 House">
+
+                </a>
+                <p class="carousel__texte">8 House
+                    <br>
+                    2010
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/en/superkilen.html">
+                    <img class="carousel__image" src="/public/img/frise/frise3.webp" alt="Superkilen">
+                </a>
+                <p class="carousel__texte">Superkilen
+                    <br>
+                    2012
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/en/maritimemuseum.html">
+                    <img class="carousel__image" src="/public/img/frise/frise4.webp" alt="Danish Maritime Museum">
+                </a>
+                <p class="carousel__texte">Danish Maritime Museum
+                    <br>
+                    2013
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/en/pyramide.html">
+                    <img class="carousel__image" src="/public/img/frise/frise5.webp" alt="Via 57 West">
+                </a>
+                <p class="carousel__texte">Via 57 West
+                    <br>
+                    2016
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/en/legohouse.html">
+                    <img class="carousel__image" src="/public/img/frise/frise6.webp" alt="Lego House">
+                </a>
+                <p class="carousel__texte">LEGO House
+                    <br>
+                    2017
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/en/amagerbakke.html">
+                    <img class="carousel__image" src="/public/img/frise/frise7.webp" alt="Amager Bakke">
+                </a>
+                <p class="carousel__texte">Amager Bakke
+                    <br>
+                    2017
+                </p>
+            </div>
+            <div class="carousel__element">
+                <a href="/en/twist.html">
+                    <img class="carousel__image" src="/public/img/frise/frise8.webp" alt="Kistefos Museum">
+                </a>
+                <p class="carousel__texte">Kistefos Museum
+                    <br>
+                    2019
+                </p>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <p>L'exposition « Ingels Scape » vous invite à découvrir l'œuvre d'un architecte avant-gardiste, maître dans
+                l'art de
+                transformer des idées audacieuses en espaces réels. Bjarke Ingels, fondateur du Bjarke Ingels Group
+                (BIG),
+                défie les
+                conventions pour créer des bâtiments emblématiques qui transcendent les frontières du design.</p>
+            <img class="image" src="/public/img/accueil/imageaccueil2.webp" alt="image de Bjarke Ingels">
+            <p>Cette exposition immersive met en lumière une sélection minutieuse des projets les plus marquants de
+                Bjarke
+                Ingels,
+                offrant une plongée fascinante dans son processus créatif. Explorez des structures emblématiques telles
+                que
+                le « 8 House
+                » qui repensent la vie en communauté, le « Danish Maritime Museum » qui fusionne architecture moderne et
+                histoire, ou
+                encore « Amager Bakke » qui associe durabilité et design novateur.</p>
+
+            <p>Chaque réalisation présentée reflète l'esprit visionnaire d'Ingels, sa capacité à marier forme et
+                fonction de
+                manière
+                inédite, et son engagement envers la durabilité environnementale.</p>
+        </div>
+        <div class="container ">
+            <div class="informations">
+                <h2 class="informations__titre">Informations pratiques</h2>
+                <figure>
+                    <img class="info__image" src="/public/img/accueil/imageaccueil3.webp"
+                        alt="image de la fondation cartier">
+                    <figcaption class="info__texte">Fondation Cartier</figcaption>
+                </figure>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Lieu</h3>
+                    <p>Fondation Cartier
+                        <br>
+                        261 Bd Raspail
+                        <br>
+                        75014 Paris
+                    </p>
+                </div>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Date</h3>
+                    <p>Du 13 avril au 23 juin 2024</p>
+                </div>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Horaires d’ouverture</h3>
+                    <p>Tous les jours de 11h à 20h, sauf le lundi.
+                        <br>
+                        Nocturne le mardi, jusqu'à 22h.
+                        <br>
+                        La fermeture des salles débute à 19h45 (21h45 les mardis).
+                    </p>
+                </div>
+                <div class="info">
+                    <h3 class="informations__sou-titre">Tarifs</h3>
+                    <p>Plein tarif : <span>11€</span>
+                        <br>
+                        Tarif réduit : <span>7,50€</span>
+                        <br>
+                        Réduction 13 - 25 ans : <span>5€</span>
+                        <br>
+                        Fondation Cartier Pass : <span>18€ - 50€</span>
+                        <br>
+                        Moins de 13 ans, Laissez-passer annuel,
+                        carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants :
+                        <span>Gratuit</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-fin">
+            <a class="btn" href="#">
+                <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                Réserver un billet
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+            <p>Ingels Scape</p>
+        </div>
+        <nav class="footer__menu">
+            <h4 class="footer__titre">MENU</h4>
+            <ul class="footer__liste list-unstyled">
+                <li><a href="/en/infoslegales.html">Legal information</a></li>
+                <li><a href="/en/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__social">
+            <h4 class="footer__titre">Follow us</h4>
+            <ul class="footer__liste--social list--unstyled">
+                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                        <img src="/public/icones/instagram.svg" alt="icone instagram">
+                    </a></li>
+                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                        <img src="/public/icones/twitter.svg" alt="icone twitter">
+                    </a></li>
+                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                        <img src="/public/icones/facebook.svg" alt="icone facebook">
+                    </a></li>
+                <li><a href="https://big.dk/">
+                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer__fin">
+            <img src="/public/icones/logommi.svg" alt="logo MMI">
+            <p>Mélissa Poilâne - A1
+            </p>
+            <div class="footer__fin--langue">
+                <img src="/public/icones/ENactif.svg" alt="logo anglais">
+
+                <nav>
+                    <a href="/fr/index.html">
+                        <img src="/public/icones/FRinactif.svg" alt="logo français">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

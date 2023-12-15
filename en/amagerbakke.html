@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amager Bakke</title>
+    <link rel="icon" href="/public/icones/logosite.svg">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="alternate" hreflang="fr" href="/fr/amagerbakke.html">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
+        <div class="header__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+        </div>
+        <div class="header__fin">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__hamburger"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/index.html">Home</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="heroarticle">
+            <div class="heroarticle__debut container">
+                <h1 class="hero__titre">Amager Bakke</h1>
+
+                <figure class="hero__image traitement">
+                    <img src="/public/img/amagerbake/bakke1.webp" alt="image de Via 57 West">
+                </figure>
+            </div>
+
+            <div class="hero__chapo chapo container">
+                <p class="chapo__text">Symbole du progrès écologique à Copenhague, Amager Bakke conjugue efficacité
+                    industrielle et durabilité
+                    environnementale.</p>
+            </div>
+        </div>
+        <section class="container">
+            <img class="image" src="/public/img/amagerbake/bakke2.webp" alt="image de Via 57 West">
+            <h3>L'Architecture Innovante au Service de l'Environnement </h3>
+            <p>Amager Bakke se démarque par son design audacieux. Surplombant la ville, cette structure combine
+                harmonieusement une usine de traitement des déchets avec des éléments de loisirs, comme une piste de ski
+                artificielle installée sur son toit. Cette fusion d'activités industrielles et de divertissement en fait
+                un exemple remarquable d'utilisation multiple de l'espace urbain.</p>
+        </section>
+        <section class="container">
+            <img class="image" src="/public/img/amagerbake/bakke3.webp" alt="image de Via 57 West">
+            <h3>Une Approche Visionnaire de la Durabilité </h3>
+            <p>Ce qui distingue le plus Amager Bakke, c'est son engagement envers la durabilité. En utilisant des
+                technologies de pointe, l'usine transforme les déchets en énergie propre et fournit de la chaleur à des
+                milliers de foyers. De plus, elle réduit les émissions nocives, démontrant ainsi un engagement fort
+                envers l'environnement.</p>
+        </section>
+        <section class="container">
+            <figure>
+                <img class="image" src="/public/img/amagerbake/bakke4.webp" alt="Jardin de Via 57 West">
+                <figcaption>Piste de ski de Amager Bakke</figcaption>
+            </figure>
+            <h3>Une Attraction Touristique Innovante </h3>
+            <p>Copenhill, avec sa piste de ski sur le toit, est devenue une destination prisée par les habitants et les
+                touristes. Cette initiative novatrice permet de sensibiliser le grand public à la durabilité tout en
+                offrant une expérience unique, mêlant loisirs et éducation environnementale.</p>
+        </section>
+        <div class="btn-fin">
+            <a class="btn" href="https://fr.wikipedia.org/wiki/VIA_57_West">
+                <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                En savoir plus
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+            <p>Ingels Scape</p>
+        </div>
+        <nav class="footer__menu">
+            <h4 class="footer__titre">MENU</h4>
+            <ul class="footer__liste list-unstyled">
+                <li><a href="/en/infoslegales.html">Legal information</a></li>
+                <li><a href="/en/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__social">
+            <h4 class="footer__titre">Follow us</h4>
+            <ul class="footer__liste--social list--unstyled">
+                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                        <img src="/public/icones/instagram.svg" alt="icone instagram">
+                    </a></li>
+                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                        <img src="/public/icones/twitter.svg" alt="icone twitter">
+                    </a></li>
+                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                        <img src="/public/icones/facebook.svg" alt="icone facebook">
+                    </a></li>
+                <li><a href="https://big.dk/">
+                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer__fin">
+            <img src="/public/icones/logommi.svg" alt="logo MMI">
+            <p>Mélissa Poilâne - A1
+            </p>
+            <div class="footer__fin--langue">
+                <img src="/public/icones/ENactif.svg" alt="logo anglais">
+
+                <nav>
+                    <a href="/fr/index.html">
+                        <img src="/public/icones/FRinactif.svg" alt="logo français">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

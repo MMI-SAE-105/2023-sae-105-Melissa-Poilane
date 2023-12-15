@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingels Scape</title>
+    <link rel="icon" href="/public/icones/logosite.svg">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="alternate" hreflang="fr" href="/fr/contact.html">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
+        <div class="header__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+        </div>
+        <div class="header__fin">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__hamburger"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/index.html">Home</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="heroautre">
+            <div class="heroautre__debut container">
+                <h1 class="hero__titre">Contactez-nous !</h1>
+
+                <figure class="hero__image traitement">
+                    <img src="/public/img/contact.webp" alt="image de la facade d'un batiment">
+                </figure>
+            </div>
+
+        </div>
+
+        <section>
+            <!-- HTML code for the form structure -->
+            <form id="contact-form" method="post">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" placeholder="Ex : Poilâne Mélissa" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse E-Mail</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: melissa@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Objet Du Message</label>
+                    <input type="text" id="subject" name="subject"
+                        placeholder="Ex: “Demande d’information”, “Support technique”..." required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Ex : ce site est vraiment génial!"
+                        required></textarea>
+                </div>
+                <div class="form-group-checkbox">
+                    <div class="container-form">
+                        <input type="checkbox" id="optin" name="optin" value="yes">
+
+                        <label for="optin">J’accepte de recevoir des communications de la part de «Ingles Scape»</label>
+                    </div>
+                    <div class="container-form">
+                        <input type="checkbox" id="consent" name="consent" value="yes">
+                        <label for="consent">Je consens au stockage de mes informations conformément à notre Politique
+                            de
+                            Confidentialité</label>
+                    </div>
+                </div>
+                <div class="form-group  btn-fin">
+                    <button class="form-btn" type="submit" id="submit">ENVOYER !</button>
+                </div>
+            </form>
+
+            <footer class="footer">
+                <div class="footer__debut">
+                    <a href="/en/index.html">
+                        <img src="/public/icones/logosite.svg" alt="Logo du site">
+                    </a>
+                    <p>Ingels Scape</p>
+                </div>
+                <nav class="footer__menu">
+                    <h4 class="footer__titre">MENU</h4>
+                    <ul class="footer__liste list-unstyled">
+                        <li><a href="/en/infoslegales.html">Legal information</a></li>
+                        <li><a href="/en/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__social">
+                    <h4 class="footer__titre">Follow us</h4>
+                    <ul class="footer__liste--social list--unstyled">
+                        <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                                <img src="/public/icones/instagram.svg" alt="icone instagram">
+                            </a></li>
+                        <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                                <img src="/public/icones/twitter.svg" alt="icone twitter">
+                            </a></li>
+                        <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                                <img src="/public/icones/facebook.svg" alt="icone facebook">
+                            </a></li>
+                        <li><a href="https://big.dk/">
+                                <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="footer__fin">
+                    <img src="/public/icones/logommi.svg" alt="logo MMI">
+                    <p>Mélissa Poilâne - A1
+                    </p>
+                    <div class="footer__fin--langue">
+                        <img src="/public/icones/ENactif.svg" alt="logo anglais">
+
+                        <nav>
+                            <a href="/fr/index.html">
+                                <img src="/public/icones/FRinactif.svg" alt="logo français">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+</body>
+
+</html>

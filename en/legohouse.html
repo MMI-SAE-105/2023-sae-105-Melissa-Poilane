@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingels Scape</title>
+    <link rel="icon" href="/public/icones/logosite.svg">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="alternate" hreflang="fr" href="/fr/legohouse.html">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+    <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+        :class="{ 'header--atTop' : }">
+        <div class="header__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+        </div>
+        <div class="header__fin">
+            <button class="header__menu-btn menu-btn" aria-label="Menu" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn__hamburger"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__liste list-unstyled">
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/index.html">Home</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/architecte.html">Bjarke Ingels</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/8house.html">8 House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/maritimemuseum.html">Maritime Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/moutaindwelling.html">Mountain Dwelling</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/legohouse.html">LEGO House</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/amagerbakke.html">Amager Bakke</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/superkilen.html">Superkilen</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/twist.html">Kistefos Museum</a>
+                    </li>
+                    <li class="menu__titre">
+                        <a class="menu__lien" href="/en/pyramide.html">Via 57 West</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="heroarticle">
+            <div class="heroarticle__debut container">
+                <h1 class="heroe__titre">LEGO House</h1>
+
+                <figure class="hero__image traitement">
+                    <img src="/public/img/legohouse/lego1.webp" alt="image de lego house">
+                </figure>
+            </div>
+
+            <div class="hero__chapo chapo container">
+                <p class="chapo__text">La LEGO House, est une exploration ludique et éducative de l'univers infini et
+                    coloré de LEGO.</p>
+            </div>
+        </div>
+        <section class="container">
+            <img class="image" src="/public/img/legohouse/lego2.webp" alt="image de lego house">
+            <h3>L'Univers Ludique de la LEGO House </h3>
+            <p>La LEGO House offre un éventail d'activités captivantes pour les passionnés de LEGO. Divisée en plusieurs
+                zones thématiques, elle propose des expositions interactives, des ateliers de construction, des
+                expositions
+                sur l'histoire de LEGO et même une galerie d'œuvres d'art en briques LEGO.</p>
+        </section>
+        <section class="container">
+            <img class="image" src="/public/img/legohouse/lego3.webp" alt="image de lego house">
+            <h3>Un Mélange Subtil d'Éducation et de Divertissement </h3>
+            <p>Au-delà de l'amusement, la LEGO House encourage l'apprentissage par le jeu. Elle stimule la créativité,
+                développe les compétences en résolution de problèmes et incite à l'exploration tout en offrant une
+                expérience éducative qui fascine les visiteurs de tous horizons.</p>
+        </section>
+        <section class="container">
+            <figure>
+                <img class="image" src="/public/img/legohouse/lego4.webp" alt="image de lego house depuis l'interieur">
+                <figcaption>LEGO House, vue de l’intérieur</figcaption>
+            </figure>
+            <h3>Une Destination Incontournable pour les Fans de LEGO </h3>
+            <p>Que ce soit pour les familles, les amateurs de LEGO ou les curieux, la LEGO House représente un lieu
+                magique.
+                Elle offre la possibilité de se plonger dans un monde de fantaisie et d'interactivité où la construction
+                et
+                l'imagination sont les maîtres mots.</p>
+        </section>
+        <div class="btn-fin">
+            <a class="btn" href="https://fr.wikipedia.org/wiki/Lego_House_(Billund)">
+                <img src="/public/icones/arrow-right.svg" alt="icone de fleche">
+                En savoir plus
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__debut">
+            <a href="/en/index.html">
+                <img src="/public/icones/logosite.svg" alt="Logo du site">
+            </a>
+            <p>Ingels Scape</p>
+        </div>
+        <nav class="footer__menu">
+            <h4 class="footer__titre">MENU</h4>
+            <ul class="footer__liste list-unstyled">
+                <li><a href="/en/infoslegales.html">Legal information</a></li>
+                <li><a href="/en/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer__social">
+            <h4 class="footer__titre">Follow us</h4>
+            <ul class="footer__liste--social list--unstyled">
+                <li><a href="https://www.instagram.com/bjarkeingels/?hl=fr" aria-label="instagram">
+                        <img src="/public/icones/instagram.svg" alt="icone instagram">
+                    </a></li>
+                <li><a href="https://twitter.com/BjarkeIngels" aria-label="twitter">
+                        <img src="/public/icones/twitter.svg" alt="icone twitter">
+                    </a></li>
+                <li><a href="https://www.facebook.com/bjarke.ingels.group" aria-label="facebook">
+                        <img src="/public/icones/facebook.svg" alt="icone facebook">
+                    </a></li>
+                <li><a href="https://big.dk/">
+                        <img src="/public/icones/big.svg" alt="icone de Bjarke Ingels Group">
+                    </a></li>
+            </ul>
+        </div>
+        <div class="footer__fin">
+            <img src="/public/icones/logommi.svg" alt="logo MMI">
+            <p>Mélissa Poilâne - A1
+            </p>
+            <div class="footer__fin--langue">
+                <img src="/public/icones/ENactif.svg" alt="logo anglais">
+
+                <nav>
+                    <a href="/fr/index.html">
+                        <img src="/public/icones/FRinactif.svg" alt="logo français">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
